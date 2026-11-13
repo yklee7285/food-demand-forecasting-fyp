@@ -1,0 +1,17 @@
+# Third-party dataset, never share
+paper_dataset/
+*banana*
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local-only project files 
+DOCUMENTATION.md
+old/
