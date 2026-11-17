@@ -1,31 +1,45 @@
-# Food Demand Forecasting System for a Campus Canteen
+# Food Waste Prediction System for Campus Canteens
 
-Final-year project for forecasting daily meal demand at a university student canteen, as a step towards reducing food waste.
+Final-year project that forecasts food demand and food waste so that canteens can prepare closer to what is actually needed and waste less food.
+
+The project replicates a published stacking-ensemble method ([Seyam et al., 2025](https://doi.org/10.1016/j.clscn.2025.100225)) and then improves it. The improved version removes data leakage, trains the stacking ensembles faster, tests the method on three public datasets and explains the forecasts with SHAP and LIME.
 
 ## Notebooks
 
-| Notebook | What it does | Open |
+Each dataset has two notebooks: a replication of the original method and an improved version.
+
+| Notebook | Data | Open |
 |---|---|---|
-| `synthetic_canteen_data_generation.ipynb` | Generates and validates a synthetic daily sales dataset for the canteen (2025–2026, Monday–Saturday) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/synthetic_canteen_data_generation.ipynb) |
-| `canteen_methodology.ipynb` | Forecasts daily meals sold with Random Forest, XGBoost, SVR, LSTM and two stacking ensembles, and compares their accuracy | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/canteen_methodology.ipynb) |
+| `synthetic_canteen_data_generation.ipynb` | Creates the synthetic canteen dataset | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/synthetic_canteen_data_generation.ipynb) |
+| `canteen_methodology.ipynb` | Synthetic canteen: daily meals sold (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/canteen_methodology.ipynb) |
+| `canteen_methodology_improved.ipynb` | Synthetic canteen: daily meals sold (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/canteen_methodology_improved.ipynb) |
+| `kaggle_canteen_methodology.ipynb` | University canteen: daily food waste (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/kaggle_canteen_methodology.ipynb) |
+| `kaggle_canteen_methodology_improved.ipynb` | University canteen: daily food waste (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/kaggle_canteen_methodology_improved.ipynb) |
+| `meal_delivery_methodology.ipynb` | Meal delivery company: weekly orders (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/meal_delivery_methodology.ipynb) |
+| `meal_delivery_methodology_improved.ipynb` | Meal delivery company: weekly orders (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/meal_delivery_methodology_improved.ipynb) |
+| `restaurant_methodology.ipynb` | Restaurant events: food waste (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/restaurant_methodology.ipynb) |
+| `restaurant_methodology_improved.ipynb` | Restaurant events: food waste (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/restaurant_methodology_improved.ipynb) |
+
+Models used: Random Forest, XGBoost, SVR, LSTM and two stacking ensembles.
 
 ## Data
 
-| File | Description |
-|---|---|
-| `datasets/canteen_sales_2025_2026.xlsx` | Synthetic canteen dataset produced by the generation notebook (626 operating days) |
-| `datasets/meal_delivery_dataset.csv` | Additional dataset for generalisability testing (source to be added) |
+All datasets are in `datasets/`.
 
-The canteen dataset is **synthetic**: it is generated from stated assumptions, not recorded sales.
+- `canteen_sales_2025_2026.xlsx`: synthetic data created for this project, not real sales.
+- `canteen_dataset.csv`: [Food Waste Dataset from a University Canteen](https://www.kaggle.com/datasets/rahuljangir78/food-waste-dataset-from-a-university-canteen) by rahuljangir78 on Kaggle (Apache 2.0).
+- `meal_delivery_dataset.csv`: [Food Demand Forecasting](https://www.kaggle.com/datasets/kannanaikkal/food-demand-forecasting) by Edwin U Kannanaikkal on Kaggle, originally from Analytics Vidhya (Open Database License).
+- `restaurant_dataset.csv`: [Food wastage data in restaurant](https://www.kaggle.com/datasets/trevinhannibal/food-wastage-data-in-restaurant) by Trevin Hannibal on Kaggle.
+
+The Kaggle datasets belong to their original authors and are included only so the notebooks can be run.
 
 ## Running
 
-**Google Colab:** click an "Open in Colab" badge above. The forecasting notebook clones this repository automatically to load the dataset.
+Click an "Open in Colab" button above. The notebooks load the data from this repository automatically.
 
-**Locally:** clone the repository, install the requirements and open the notebooks with Jupyter:
+To run locally:
 
 ```bash
-pip install pandas numpy scipy scikit-learn xgboost tensorflow matplotlib seaborn openpyxl
+git clone https://github.com/yklee7285/food-demand-forecasting-fyp.git
+pip install pandas numpy scipy scikit-learn xgboost tensorflow matplotlib seaborn openpyxl shap lime
 ```
-
-The synthetic dataset is already included in `datasets/`, and running `synthetic_canteen_data_generation.ipynb` will regenerate the exact same dataset through the same random seed.
