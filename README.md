@@ -41,5 +41,6 @@ To run locally:
 
 ```bash
 git clone https://github.com/yklee7285/food-demand-forecasting-fyp.git
-pip install pandas numpy scipy scikit-learn xgboost tensorflow matplotlib seaborn openpyxl shap lime
+cd food-demand-forecasting-fyp
+pip install -r requirements.txt
 ```
