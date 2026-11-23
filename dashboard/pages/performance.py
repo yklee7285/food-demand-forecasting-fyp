@@ -18,7 +18,7 @@ tune = model.table("tuning_comparison").loc["Stacking 1"]
 
 ui.header("Performance", "How good is the model?",
           f"Test period {m['test_dates'][0]} to {m['test_dates'][1]}: {len(tp)} days the model never saw in training. "
-          "All figures come from the final run of canteen_methodology_improved.ipynb.")
+          "All figures come from the final run of notebooks/synthetic_canteen/canteen_methodology_improved.ipynb.")
 
 c1, c2, c3, c4 = st.columns(4)
 with c1:

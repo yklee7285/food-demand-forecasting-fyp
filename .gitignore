@@ -14,10 +14,8 @@ Thumbs.db
 desktop.ini
 
 # Local-only project files 
-DOCUMENTATION.md
+DOCUMENTATION/
 old/
-PLOT_INTERPRETATION.md
-DASHBOARD_PLAN.md
 
 # Dashboard: local environment and recorded days
 .venv/

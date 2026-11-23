@@ -6,25 +6,25 @@ The project replicates a published stacking-ensemble method ([Seyam et al., 2025
 
 ## Notebooks
 
-Each dataset has two notebooks: a replication of the original method and an improved version.
+The notebooks are in `notebooks/`, one folder per dataset. Each dataset has two notebooks: a replication of the original method and an improved version.
 
 | Notebook | Data | Open |
 |---|---|---|
-| `synthetic_canteen_data_generation.ipynb` | Creates the synthetic canteen dataset | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/synthetic_canteen_data_generation.ipynb) |
-| `canteen_methodology.ipynb` | Synthetic canteen: daily meals sold (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/canteen_methodology.ipynb) |
-| `canteen_methodology_improved.ipynb` | Synthetic canteen: daily meals sold (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/canteen_methodology_improved.ipynb) |
-| `kaggle_canteen_methodology.ipynb` | University canteen: daily food waste (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/kaggle_canteen_methodology.ipynb) |
-| `kaggle_canteen_methodology_improved.ipynb` | University canteen: daily food waste (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/kaggle_canteen_methodology_improved.ipynb) |
-| `meal_delivery_methodology.ipynb` | Meal delivery company: weekly orders (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/meal_delivery_methodology.ipynb) |
-| `meal_delivery_methodology_improved.ipynb` | Meal delivery company: weekly orders (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/meal_delivery_methodology_improved.ipynb) |
-| `restaurant_methodology.ipynb` | Restaurant events: food waste (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/restaurant_methodology.ipynb) |
-| `restaurant_methodology_improved.ipynb` | Restaurant events: food waste (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/restaurant_methodology_improved.ipynb) |
+| `synthetic_canteen/synthetic_canteen_data_generation.ipynb` | Creates the synthetic canteen dataset | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/synthetic_canteen/synthetic_canteen_data_generation.ipynb) |
+| `synthetic_canteen/canteen_methodology.ipynb` | Synthetic canteen: daily meals sold (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/synthetic_canteen/canteen_methodology.ipynb) |
+| `synthetic_canteen/canteen_methodology_improved.ipynb` | Synthetic canteen: daily meals sold (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/synthetic_canteen/canteen_methodology_improved.ipynb) |
+| `kaggle_canteen/kaggle_canteen_methodology.ipynb` | University canteen: daily food waste (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/kaggle_canteen/kaggle_canteen_methodology.ipynb) |
+| `kaggle_canteen/kaggle_canteen_methodology_improved.ipynb` | University canteen: daily food waste (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/kaggle_canteen/kaggle_canteen_methodology_improved.ipynb) |
+| `meal_delivery/meal_delivery_methodology.ipynb` | Meal delivery company: weekly orders (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/meal_delivery/meal_delivery_methodology.ipynb) |
+| `meal_delivery/meal_delivery_methodology_improved.ipynb` | Meal delivery company: weekly orders (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/meal_delivery/meal_delivery_methodology_improved.ipynb) |
+| `restaurant/restaurant_methodology.ipynb` | Restaurant events: food waste (replication) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/restaurant/restaurant_methodology.ipynb) |
+| `restaurant/restaurant_methodology_improved.ipynb` | Restaurant events: food waste (improved) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yklee7285/food-demand-forecasting-fyp/blob/main/notebooks/restaurant/restaurant_methodology_improved.ipynb) |
 
 Models used: Random Forest, XGBoost, SVR, LSTM and two stacking ensembles.
 
 ## Dashboard
 
-`dashboard/` contains a Streamlit dashboard for canteen staff. Each day it shows how many meals to prepare and why; at the end of the day staff record the meals sold, and the next forecast uses them. It also tracks leftovers, flags unusual days, prints a kitchen prep sheet and has a what-if tool and a performance page. It uses the stacking ensemble (Random Forest, XGBoost and SVR) trained in `canteen_methodology_improved.ipynb`.
+`dashboard/` contains a Streamlit dashboard for canteen staff. Each day it shows how many meals to prepare and why; at the end of the day staff record the meals sold, and the next forecast uses them. It also tracks leftovers, flags unusual days, prints a kitchen prep sheet and has a what-if tool and a performance page. It uses the stacking ensemble (Random Forest, XGBoost and SVR) trained in `notebooks/synthetic_canteen/canteen_methodology_improved.ipynb`.
 
 On Windows, double-click `run_dashboard.bat` (needs Python 3.13). Or run:
 

@@ -9,7 +9,7 @@ A Streamlit dashboard for canteen staff. Each day it shows how many meals to pre
 | What-if | Manager | How the forecast changes with a different academic period, price or recent sales |
 | Performance | Examiner | Accuracy, training time, explanations, about and limitations |
 
-The forecasts come from the stacking ensemble (Random Forest, XGBoost and SVR) trained in `canteen_methodology_improved.ipynb`. The dashboard loads the saved model from `artifacts/` and never retrains it. Recorded days are kept in `data/daily_log.csv` and closed days (for example public holidays) in `data/closed_days.csv`.
+The forecasts come from the stacking ensemble (Random Forest, XGBoost and SVR) trained in `notebooks/synthetic_canteen/canteen_methodology_improved.ipynb`. The dashboard loads the saved model from `artifacts/` and never retrains it. Recorded days are kept in `data/daily_log.csv` and closed days (for example public holidays) in `data/closed_days.csv`.
 
 ## Running on Windows
 
@@ -32,7 +32,7 @@ The dashboard can be hosted free on Streamlit Community Cloud from the public Gi
 
 ## Updating the model
 
-Rerun `canteen_methodology_improved.ipynb`; its last section rewrites `artifacts/`. Keep the library versions in `requirements.txt`, because the saved models only load reliably with the same scikit-learn version.
+Rerun `notebooks/synthetic_canteen/canteen_methodology_improved.ipynb`; its last section rewrites `artifacts/`. Keep the library versions in `requirements.txt`, because the saved models only load reliably with the same scikit-learn version.
 
 ## Tests
 
