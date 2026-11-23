@@ -5,6 +5,7 @@ paper_dataset/
 # Jupyter / Python
 .ipynb_checkpoints/
 __pycache__/
+.pytest_cache/
 *.pyc
 
 # OS files
@@ -17,3 +18,7 @@ DOCUMENTATION.md
 old/
 PLOT_INTERPRETATION.md
 DASHBOARD_PLAN.md
+
+# Dashboard: local environment and recorded days
+.venv/
+dashboard/data/

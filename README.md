@@ -22,6 +22,19 @@ Each dataset has two notebooks: a replication of the original method and an impr
 
 Models used: Random Forest, XGBoost, SVR, LSTM and two stacking ensembles.
 
+## Dashboard
+
+`dashboard/` contains a Streamlit dashboard for canteen staff. Each day it shows how many meals to prepare and why; at the end of the day staff record the meals sold, and the next forecast uses them. It also tracks leftovers, flags unusual days, prints a kitchen prep sheet and has a what-if tool and a performance page. It uses the stacking ensemble (Random Forest, XGBoost and SVR) trained in `canteen_methodology_improved.ipynb`.
+
+On Windows, double-click `run_dashboard.bat` (needs Python 3.13). Or run:
+
+```bash
+pip install -r dashboard/requirements.txt
+streamlit run dashboard/app.py
+```
+
+More options, including an online demo, are in `dashboard/README.md`.
+
 ## Data
 
 All datasets are in `datasets/`.
