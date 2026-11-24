@@ -1,4 +1,4 @@
-# Food Waste Prediction System for Campus Canteens
+# Food Waste Forecasting System for Campus Canteens
 
 Final-year project that forecasts food demand and food waste so that canteens can prepare closer to what is actually needed and waste less food.
 
